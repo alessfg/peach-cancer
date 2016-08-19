@@ -6,10 +6,12 @@ import { Route, IndexRoute } from 'react-router';
 import App from '../components/App';
 // HomePage component
 import HomePage from '../components/HomePage';
+import Patients from '../components/Patients';
 
 // Create the routes for the application
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
+    <Route path="patients" component={Patients} />
   </Route>
 );

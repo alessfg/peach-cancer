@@ -4,6 +4,7 @@ import 'babel-polyfill';
 import React from 'react';
 // React DOM renderer
 import ReactDOM from 'react-dom';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 // Container to enable hot reloading
 import { AppContainer } from 'react-hot-loader';
 // React router browser history for use with react hot loader
@@ -15,6 +16,7 @@ import configureStore from './store/configureStore';
 // Root application manager
 import Root from './containers/Root';
 
+injectTapEventPlugin();
 // Create store
 const store = configureStore();
 // Create enhanced history that synchronises navigation events with store

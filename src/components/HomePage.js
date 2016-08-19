@@ -5,7 +5,7 @@ import React from 'react';
 export default function HomePage() {
   return (
     <div>
-      An application to organise and coordinate MDT meetings
+      Welcome to Peach Cancer
     </div>
   );
 }
