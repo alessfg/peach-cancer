@@ -73,12 +73,16 @@ export default class Header extends React.Component {
           open={this.state.drawer}
           onRequestChange={() => this.setState({drawer: false})}
         >
-          <Link to="/">
-            <MenuItem primaryText="HomePage" onTouchTap={() => this.setState({drawer: false})}/>
-          </Link>
-          <Link to="patients">
-            <MenuItem primaryText="Patients" onTouchTap={() => this.setState({drawer: false})}/>
-          </Link>
+          <MenuItem primaryText={<Logo />} />
+          <MenuItem containerElement={<Link to="/" />} primaryText="HomePage" onTouchTap={() => this.setState({drawer: false})}/>
+          <MenuItem primaryText="Patients"
+            menuItems={
+              <div>
+                <MenuItem primaryText="Add" />
+                <MenuItem primaryText="Search" containerElement={<Link to="patients" />} />
+              </div>
+            }
+          />
         </Drawer>
       </div>
     );
