@@ -1,0 +1,40 @@
+@import '~normalize.css';
+@import '~flexboxgrid';
+
+/**
+ * Next four blocks are used to fix button appearance when using
+ * Material-UI with normalize
+ */
+span[type=button] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+span[type=submit] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+a[type=button] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+a[type=submit] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/**
+ * Fix margin issue with flexboxgrid
+ */
+.row {
+  margin: 0;
+}
+
+/**
+ * Set font-family
+ */
+html {
+  font-family: 'Roboto', sans-serif;
+}
