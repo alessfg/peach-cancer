@@ -35,6 +35,7 @@ export default function validate(values) {
   if (values.gpEmail && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.gpEmail)) {
     errors.gpEmail = 'Invalid email address';
   }
+  // eslint-disable-next-line max-len
   if (values.nextOfKinEmail && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.nextOfKinEmail)) {
     errors.nextOfKinEmail = 'Invalid email address';
   }

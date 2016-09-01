@@ -31,11 +31,12 @@ function PersonalDetailsForm({ handleSubmit, stepper }) {
         <div className="col-xs-12 col-md-4">
           <Field
             component={DatePicker}
-            defaultValue={null}
+            value={{}}
             fullWidth
             hintText="Patient Date of Birth"
             name="birthdate"
             textFieldStyle={{ height: '72px' }}
+            value={null}
           />
         </div>
       </div>
@@ -104,11 +105,11 @@ function PersonalDetailsForm({ handleSubmit, stepper }) {
         </div>
         <div className="col-xs-12 col-md-6">
           <Field
-            name="gender"
             component={SelectField}
+            floatingLabelText="Patient Gender"
             fullWidth
             hintText="Patient Gender"
-            floatingLabelText="Patient Gender"
+            name="gender"
           >
             <MenuItem value="Male" primaryText="Male" />
             <MenuItem value="Female" primaryText="Female" />
