@@ -1,4 +1,3 @@
-/* eslint-disable */
 import * as types from '../constants/actionTypes';
 
 export function beginFetchRequest() {
@@ -13,7 +12,7 @@ export function fetchRequestSuccess() {
   };
 }
 
-export function fetchRequestError() {
+export function fetchRequestFailure() {
   return {
     type: types.FETCH_REQUEST_FAILURE,
   };

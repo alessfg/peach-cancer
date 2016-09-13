@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import CircularProgress from 'material-ui/CircularProgress';
 import { StyleSheet, css } from 'aphrodite';
 import PatientToolbar from '../../components/patientDirectory/PatientToolbar';
-import PatientTable from '../../components/patientDirectory/PatientTable';
+import PatientList from '../../components/patientDirectory/PatientList';
 
-class PatientDirectoryPage extends React.Component {
+export class PatientDirectoryPage extends React.Component {
 
   constructor(props) {
     super(props);
@@ -48,7 +48,7 @@ class PatientDirectoryPage extends React.Component {
             patients={this.state.patients}
             filter={this.filterPatients}
           />
-          <PatientTable
+          <PatientList
             patients={this.state.patients}
           />
         </div>

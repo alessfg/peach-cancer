@@ -29,6 +29,5 @@ export default (
       <Route path="history" component={PatientHistory} />
       <Route path="notes" components={PatientNotes} />
     </Route>
-    {/* <Route path="*" component={PageNotFound} /> */}
   </Route>
 );

@@ -17,3 +17,7 @@ PatientCard.propTypes = {
   patient: PropTypes.object.isRequired,
   active: PropTypes.bool,
 };
+
+PatientCard.defaultProps = {
+  active: false,
+};

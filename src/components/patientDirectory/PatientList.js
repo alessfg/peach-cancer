@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow } from 'material-ui/Table';
-import PatientTableRow from './PatientTableRow';
+import PatientListRow from './PatientListRow';
 
-export default function PatientTable({ patients }) {
+export default function PatientList({ patients }) {
   return (
     <Table>
       <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
@@ -17,13 +17,13 @@ export default function PatientTable({ patients }) {
       </TableHeader>
       <TableBody displayRowCheckbox={false}>
         {patients.map(patient =>
-          <PatientTableRow key={patient.id} patient={patient} />
+          <PatientListRow key={patient.id} patient={patient} />
         )}
       </TableBody>
     </Table>
   );
 }
 
-PatientTable.propTypes = {
+PatientList.propTypes = {
   patients: PropTypes.array.isRequired,
 };

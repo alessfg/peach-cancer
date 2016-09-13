@@ -1,4 +1,3 @@
-/* eslint-disable */
 // Polyfill to support new ES6 functions
 import 'babel-polyfill';
 // React
@@ -17,7 +16,9 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './store/configureStore';
 // Root application manager
 import Root from './containers/root/Root';
+// Load patient action
 import { loadPatients } from './actions/patientActions';
+// Application styles
 import './styles/styles.css';
 // Inject tap event plugin
 injectTapEventPlugin();
@@ -25,11 +26,11 @@ injectTapEventPlugin();
 const store = configureStore();
 // Create enhanced history that synchronises navigation events with store
 const history = syncHistoryWithStore(browserHistory, store);
-
+// Load patients in database
 store.dispatch(loadPatients());
 // Render hot reloading app container
 ReactDOM.render(
-  <AppContainer style={{height:'100%'}}>
+  <AppContainer>
     <Root store={store} history={history} />
   </AppContainer>,
   document.getElementById('root')

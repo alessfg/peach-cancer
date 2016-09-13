@@ -6,8 +6,8 @@ import { StyleSheet, css } from 'aphrodite';
 import Search from 'material-ui/svg-icons/action/search';
 import FlatButton from 'material-ui/FlatButton';
 
-export default function PatientManagementToolbar({ patients, filter }) {
-  const styles = PatientManagementToolbar.styles;
+export default function PatientToolbar({ patients, filter }) {
+  const styles = PatientToolbar.styles;
   return (
     <Toolbar className={css(styles.toolbar)}>
       <ToolbarGroup className={css(styles.toolbarGroup)}>
@@ -29,7 +29,7 @@ export default function PatientManagementToolbar({ patients, filter }) {
   );
 }
 
-PatientManagementToolbar.styles = StyleSheet.create({
+PatientToolbar.styles = StyleSheet.create({
   toolbar: {
     backgroundColor: '#FFE0B2',
   },
@@ -45,7 +45,7 @@ PatientManagementToolbar.styles = StyleSheet.create({
   },
 });
 
-PatientManagementToolbar.propTypes = {
+PatientToolbar.propTypes = {
   patients: PropTypes.array.isRequired,
   filter: PropTypes.func,
 };

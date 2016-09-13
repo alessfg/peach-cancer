@@ -1,13 +1,11 @@
-/* eslint-disable */
 import uuid from 'node-uuid';
 import delay from './delay';
 import patients from './storedPatients';
 
-
 export default class PatientApi {
 
   static getAllPatients() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         resolve(Object.assign([], patients));
       }, delay);
@@ -15,12 +13,12 @@ export default class PatientApi {
   }
 
   static savePatient(patient) {
-    patient = Object.assign({}, patient);
-    return new Promise((resolve, reject) => {
+    const newPatient = Object.assign({}, patient);
+    return new Promise((resolve) => {
       setTimeout(() => {
-        patient.id = uuid.v4();
-        patients.push(patient);
-        resolve(patient);
+        newPatient.id = uuid.v4();
+        patients.push(newPatient);
+        resolve(newPatient);
       }, delay);
     });
   }

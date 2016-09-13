@@ -13,7 +13,7 @@ function* getAllPatients() {
     yield put(patientActions.loadPatientsSuccess(patients));
     yield put(fetchStatusActions.fetchRequestSuccess());
   } catch (error) {
-    yield put(fetchStatusActions.fetchRequestError());
+    yield put(fetchStatusActions.fetchRequestFailure());
   }
 }
 

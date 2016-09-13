@@ -1,4 +1,3 @@
-/* eslint-disable */
 import * as types from '../constants/actionTypes';
 
 export default function fetchStatusReducer(state = 0, action) {
