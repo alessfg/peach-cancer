@@ -5,7 +5,7 @@ import { StyleSheet, css } from 'aphrodite';
 import PatientToolbar from '../../components/patientDirectory/PatientToolbar';
 import PatientList from '../../components/patientDirectory/PatientList';
 
-export class PatientDirectoryPage extends React.Component {
+class PatientDirectoryPage extends React.Component {
 
   constructor(props) {
     super(props);
